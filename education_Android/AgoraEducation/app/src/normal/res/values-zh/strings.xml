@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">声网云课堂</string>
+    <string name="hint_room_name">房间名</string>
+    <string name="hint_room_type">房间类型</string>
+    <string name="room_name_should_not_be_empty">房间名不能为空</string>
+    <string name="room_type_should_not_be_empty">房间类型不能为空</string>
+    <string name="one2one_class">一对一</string>
+    <string name="small_class">小班课</string>
+    <string name="large_class">大班课</string>
+</resources>

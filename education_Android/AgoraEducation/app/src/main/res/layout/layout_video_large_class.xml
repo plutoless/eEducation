@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/layout_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:id="@+id/layout_place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_DBE2E5">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_video_mute" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/btn_circle_black_79"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_3"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <io.agora.education.classroom.widget.RtcAudioView
+        android:id="@+id/ic_audio"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</merge>

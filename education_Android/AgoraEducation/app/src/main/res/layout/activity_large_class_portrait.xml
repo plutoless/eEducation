@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classroom.LargeClassActivity">
+
+    <io.agora.education.classroom.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_52"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/layout_video_teacher"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_204"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+    <FrameLayout
+        android:id="@+id/layout_video_student"
+        android:layout_width="@dimen/dp_81"
+        android:layout_height="@dimen/dp_114"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@id/layout_video_teacher"
+        app:layout_constraintTop_toTopOf="@id/layout_video_teacher" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/layout_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:layout_constraintTop_toBottomOf="@id/layout_video_teacher"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/blue_44A2FC"
+        app:tabIndicatorHeight="@dimen/dp_1"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/blue_44A2FC"
+        app:tabTextColor="@color/gray_333333">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_teaching_material" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_chat_room" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_chat_room"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_tab" />
+
+    <FrameLayout
+        android:id="@+id/layout_materials"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_tab">
+
+        <FrameLayout
+            android:id="@+id/layout_whiteboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/layout_share_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layout_hand_up"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:padding="@dimen/dp_4">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_hand" />
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReplayViewController">
+            <connections>
+                <outlet property="backButton" destination="jzw-Yu-DnS" id="I0x-Ec-Phb"/>
+                <outlet property="controlView" destination="Hi6-0l-v7Z" id="FBx-R7-jXe"/>
+                <outlet property="defaultTeacherImage" destination="0Kj-Ro-l3V" id="C7y-ig-Ovi"/>
+                <outlet property="loadingView" destination="e84-YP-Tqr" id="zHJ-Tb-3YF"/>
+                <outlet property="playBackgroundView" destination="hld-Yf-Sot" id="ZZ0-8g-KE8"/>
+                <outlet property="playButton" destination="Dv9-qi-6m2" id="8T0-jA-hCa"/>
+                <outlet property="teacherView" destination="aA1-yU-h8j" id="pcT-WC-BtG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="whiteboardBaseView" destination="FNl-TS-YFc" id="KxA-c2-3mo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNl-TS-YFc">
+                    <rect key="frame" x="44" y="0.0" width="586" height="414"/>
+                    <subviews>
+                        <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hld-Yf-Sot">
+                            <rect key="frame" x="0.0" y="0.0" width="586" height="414"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1V9-dC-Fa3">
+                            <rect key="frame" x="0.0" y="0.0" width="586" height="414"/>
+                            <connections>
+                                <action selector="onWhiteBoardClick:" destination="-1" eventType="touchUpInside" id="gbN-A4-ak3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-qi-6m2">
+                            <rect key="frame" x="253" y="167" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="YZU-JN-zrd"/>
+                                <constraint firstAttribute="width" constant="80" id="b2l-dd-WnA"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="big_play"/>
+                            <connections>
+                                <action selector="onPlayClick:" destination="-1" eventType="touchUpInside" id="3mj-WG-xcP"/>
+                            </connections>
+                        </button>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e84-YP-Tqr" customClass="LoadingView">
+                            <rect key="frame" x="231" y="145" width="124" height="124"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="124" id="auy-5w-vNp"/>
+                                <constraint firstAttribute="width" constant="124" id="t9c-Ou-Yv0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="e84-YP-Tqr" firstAttribute="centerX" secondItem="FNl-TS-YFc" secondAttribute="centerX" id="1Rm-IL-74M"/>
+                        <constraint firstAttribute="trailing" secondItem="1V9-dC-Fa3" secondAttribute="trailing" id="BH1-Im-Jee"/>
+                        <constraint firstItem="hld-Yf-Sot" firstAttribute="top" secondItem="FNl-TS-YFc" secondAttribute="top" id="GjL-rS-bbx"/>
+                        <constraint firstItem="hld-Yf-Sot" firstAttribute="leading" secondItem="FNl-TS-YFc" secondAttribute="leading" id="PBw-bZ-H7R"/>
+                        <constraint firstAttribute="bottom" secondItem="hld-Yf-Sot" secondAttribute="bottom" id="R4T-ld-D2q"/>
+                        <constraint firstAttribute="bottom" secondItem="1V9-dC-Fa3" secondAttribute="bottom" id="XT6-un-lfI"/>
+                        <constraint firstItem="Dv9-qi-6m2" firstAttribute="centerY" secondItem="FNl-TS-YFc" secondAttribute="centerY" id="ch3-ZH-w5l"/>
+                        <constraint firstItem="1V9-dC-Fa3" firstAttribute="top" secondItem="FNl-TS-YFc" secondAttribute="top" id="f8T-4y-XXm"/>
+                        <constraint firstItem="Dv9-qi-6m2" firstAttribute="centerX" secondItem="FNl-TS-YFc" secondAttribute="centerX" id="fpY-Mx-tGh"/>
+                        <constraint firstItem="1V9-dC-Fa3" firstAttribute="leading" secondItem="FNl-TS-YFc" secondAttribute="leading" id="gJc-iZ-aeI"/>
+                        <constraint firstAttribute="trailing" secondItem="hld-Yf-Sot" secondAttribute="trailing" id="phI-M1-9s6"/>
+                        <constraint firstItem="e84-YP-Tqr" firstAttribute="centerY" secondItem="FNl-TS-YFc" secondAttribute="centerY" id="wv9-gZ-BP6"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aA1-yU-h8j">
+                    <rect key="frame" x="630" y="0.0" width="222" height="125"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="replay_teacher" translatesAutoresizingMaskIntoConstraints="NO" id="0Kj-Ro-l3V">
+                            <rect key="frame" x="65" y="16.5" width="92" height="92"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="92" id="IZk-7t-Ut9"/>
+                                <constraint firstAttribute="height" constant="92" id="JN3-G4-NDp"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.85882352941176465" green="0.88627450980392153" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="125" id="a5q-mA-6Cj"/>
+                        <constraint firstAttribute="width" constant="222" id="a9S-gI-2d1"/>
+                        <constraint firstItem="0Kj-Ro-l3V" firstAttribute="centerY" secondItem="aA1-yU-h8j" secondAttribute="centerY" id="fQv-Lg-XgP"/>
+                        <constraint firstItem="0Kj-Ro-l3V" firstAttribute="centerX" secondItem="aA1-yU-h8j" secondAttribute="centerX" id="ySX-bd-5y0"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-Yu-DnS" customClass="EduButton">
+                    <rect key="frame" x="54" y="10" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="1Vk-Ei-HL7"/>
+                        <constraint firstAttribute="height" constant="35" id="31z-jn-HWh"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="back"/>
+                    <connections>
+                        <action selector="onBackClick:" destination="-1" eventType="touchUpInside" id="ON7-xp-Siw"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hi6-0l-v7Z" customClass="ReplayControlView">
+                    <rect key="frame" x="52" y="358" width="570" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="QFC-PQ-P9c"/>
+                    </constraints>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message" translatesAutoresizingMaskIntoConstraints="NO" id="jN6-gJ-5Ex">
+                    <rect key="frame" x="676" y="202" width="130" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="69S-mS-cJ7"/>
+                        <constraint firstAttribute="width" constant="130" id="pzC-wh-nuA"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jzw-Yu-DnS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="0MA-dc-uAO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="leading" secondItem="Hi6-0l-v7Z" secondAttribute="leading" constant="-8" id="0or-CG-gcy"/>
+                <constraint firstItem="jzw-Yu-DnS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="5p0-wN-mbo"/>
+                <constraint firstItem="aA1-yU-h8j" firstAttribute="leading" secondItem="FNl-TS-YFc" secondAttribute="trailing" id="68M-po-MEJ"/>
+                <constraint firstItem="jN6-gJ-5Ex" firstAttribute="centerY" secondItem="hld-Yf-Sot" secondAttribute="centerY" constant="60" id="8rD-Ch-bbj"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="Hi6-0l-v7Z" secondAttribute="bottom" id="L5k-Sl-w6I"/>
+                <constraint firstItem="jN6-gJ-5Ex" firstAttribute="centerX" secondItem="0Kj-Ro-l3V" secondAttribute="centerX" id="MQi-tk-2Av"/>
+                <constraint firstItem="aA1-yU-h8j" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="MyR-eX-wiG"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="aA1-yU-h8j" secondAttribute="trailing" id="TYY-Ar-JqG"/>
+                <constraint firstItem="aA1-yU-h8j" firstAttribute="leading" secondItem="FNl-TS-YFc" secondAttribute="trailing" id="Vkn-uC-yCl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="leading" secondItem="FNl-TS-YFc" secondAttribute="leading" id="Znl-ex-Whl"/>
+                <constraint firstItem="Hi6-0l-v7Z" firstAttribute="trailing" secondItem="FNl-TS-YFc" secondAttribute="trailing" constant="-8" id="cnC-IC-nhq"/>
+                <constraint firstItem="FNl-TS-YFc" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="eIX-JR-GJW"/>
+                <constraint firstAttribute="bottom" secondItem="FNl-TS-YFc" secondAttribute="bottom" id="vzo-Db-d1l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.61607142857142" y="91.304347826086968"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="17.5" height="17.5"/>
+        <image name="big_play" width="40" height="40"/>
+        <image name="message" width="65" height="65"/>
+        <image name="replay_teacher" width="48" height="48"/>
+    </resources>
+</document>

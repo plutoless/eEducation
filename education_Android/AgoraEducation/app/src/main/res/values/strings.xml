@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="powered_by_agora_io" translatable="false">Powered by agora.io</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="eye_care_mode">Eye protection</string>
+    <string name="join">Join</string>
+    <string name="setting">Setting</string>
+    <string name="title_teaching_material">Materials area</string>
+    <string name="title_chat_room">ChatRoom</string>
+    <string name="confirm_leave_room_content">Quit classroom?</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_im_message">Input message</string>
+    <string name="confirm">Confirm</string>
+    <string name="title_student_list">Student</string>
+    <string name="your_name_should_not_be_empty">Your name should not be empty.</string>
+    <string name="color_picker">Color Picker</string>
+    <string name="no_enough_permissions">No enough permissions</string>
+    <string name="there_is_no_teacher_in_this_classroom">There is no teacher in this classroom, cannot use the whiteboard.</string>
+    <string name="get_channel_attr_failed">Get channel attributes failed，Please try again later!</string>
+    <string name="the_room_is_full">Room is full, please change another room!</string>
+    <string name="chat_muting">Prohibited post!</string>
+    <string name="time_default" translatable="false">00:00:00</string>
+    <string name="time_separator" translatable="false">&#160;/&#160;</string>
+    <string name="app_upgrade">Find new version, please download</string>
+    <string name="upgrade">Upgrade now</string>
+    <string name="later">Later</string>
+    <string name="rtm_not_login">RTM not login, please try again later</string>
+    <string name="configuration_load_failed">Configuration load failed, please try again later</string>
+    <string name="policy_tips">Please read carefully and fully understand the terms of the user agreement and privacy policy.</string>
+    <string name="policy">User agreement and privacy policy</string>
+    <string name="policy_agree">Agree</string>
+    <string name="policy_refuse">Refuse</string>
+    <string name="accept_interactive">Teacher accept your interactive request!</string>
+    <string name="reject_interactive">Teacher reject your interactive request!</string>
+    <string name="authorize_board">Teacher has authorized your whiteboard permissions</string>
+    <string name="revoke_board">Teacher has revoked your whiteboard permissions</string>
+    <string name="request_error">Server request error: %1$d</string>
+    <string name="wait_record">Please wait for recording finished</string>
+    <string name="follow_tips">The teacher is moving the whiteboard. Please do not draw on it</string>
+</resources>

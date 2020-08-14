@@ -1,0 +1,128 @@
+@keyframes fadeOut {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.fading {
+  animation-name: fadeOut;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  will-change: opacity;
+}
+
+.one-to-one {
+  .chat-board {
+    justify-content: flex-end;
+    .chat-messages {
+      top: 0;
+    }
+  }
+}
+
+.chat-board {
+  position: relative;
+  min-width: 280px;
+  max-width: 280px;
+  border-left: 1px solid #DBE2E5;
+  border-top: 1px solid #DBE2E5;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  .chat-roomname {
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid #DBE2E5;
+    box-sizing: border-box;
+    width:96px;
+    height:16px;
+    font-size:14px;
+    color:rgba(51,51,51,1);
+    line-height:16px;
+    max-width: 280px;
+    min-width: 280px;
+    max-height:47px;
+    min-height:47px;
+    background:rgba(255,255,255,1);
+  }
+  
+  .chat-messages {
+    height: 100%;
+    position: absolute;
+    min-width: 280px;
+    scroll-behavior: smooth;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+    .message.receive {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .message.sent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .content {
+        background-color: #E7F6FF;
+      }
+    }
+
+    .message {
+      margin: 10px;
+      flex-shrink: 0;
+
+      .nickname {
+        margin-bottom: 3px;
+        color: #666666;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      .content {
+        display: inline-block;
+        max-width: 260px;
+        padding: 9px 10px;
+        border: 1px solid #DBE2E5;
+        border-radius: 4px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        overflow: hidden;
+        line-height: 20px;
+        font-size: 14px;
+        color: #333333;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

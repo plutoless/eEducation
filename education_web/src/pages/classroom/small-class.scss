@@ -1,0 +1,122 @@
+.classroom {
+  .fixed {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    z-index: 10;
+  }
+
+  .chat-board {
+    min-width: 280px;
+  }
+}
+
+.video-marquee-container {
+  display: flex;
+  min-width: 990px;
+  background: #F5F7F8;
+  max-height: 122px;
+  min-height: 122px;
+  align-items: flex-start;
+  padding-top: 5px;
+
+  .agora-video-view {
+    min-width: 187px;
+    min-height: 106px;
+    max-width: 187px;
+    max-height: 106px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    .student-placeholder,
+    .teacher-placeholder {
+      flex: 1;
+      background-color: #DBE2E5;
+      justify-content: center;
+      box-sizing: border-box;
+      background-size: 66px;
+      min-width: 187px;
+      min-height: 82px;
+      max-width: 187px;
+      max-height: 82px;
+      border-radius: 2px;
+      box-sizing: border-box;
+      position: absolute;
+    }
+    .student-placeholder::before,
+    .teacher-placeholder::before {
+      background-size: 63px;
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .classroom.small-class {
+    min-width: 1920px;
+    min-height: 1080px;
+
+    .chat-board {
+      // min-height: 866px;
+    }
+
+    .whiteboard {
+      min-height: 866px;
+      min-width: 1640px;
+    }
+
+    .video-marquee-container {
+      display: flex;
+      min-width: 1920px;
+      background: #F5F7F8;
+      max-height: 165px;
+      min-height: 165px;
+      align-items: flex-start;
+      padding-top: 2px;
+      margin-bottom: -2px;
+
+      .agora-video-view {
+        min-width: 264px;
+        min-height: 150px;
+        border-radius: 2px;
+        box-sizing: border-box;
+        .teacher-placeholder,
+        .student-placeholder {
+          min-width: 264px;
+          min-height: 126px;
+          border-radius: 2px;
+          box-sizing: border-box;
+        }
+      }
+    }
+  }
+}
+
+.small-class {
+  .room-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .main {
+      margin-left: 10px;
+      margin-right: 3.33px;
+      display: flex;
+    }
+
+    .video-marquee {
+      scroll-behavior: smooth;
+      display: flex;
+      overflow: auto;
+      -ms-overflow-style: none; // IE 10+
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .agora-video-view {
+        margin: 0px 3.33px;
+        z-index: 2;
+      }
+    }
+  }
+}

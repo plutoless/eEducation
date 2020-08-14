@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agora Cloud Class</string>
+    <string name="hint_room_name">Room Name</string>
+    <string name="hint_room_type">Room Type</string>
+    <string name="room_name_should_not_be_empty">Room name should not be empty.</string>
+    <string name="room_type_should_not_be_empty">Room type should not be empty.</string>
+    <string name="one2one_class">One to One Classroom</string>
+    <string name="small_class">Small Classroom</string>
+    <string name="large_class">Lecture Hall</string>
+</resources>

@@ -1,0 +1,31 @@
+.contentCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  color: white;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 880px;
+}
+
+// .title {
+//   font-size: 13.7em;
+//   color: white;
+//   letter-spacing: 14px;
+//   font-weight: 700;
+// }
+
+.description {
+  font-size: 1.125rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.subTitle {
+  font-size: 2.25rem;
+  margin-top: 0;
+  margin-bottom: 8px;
+}

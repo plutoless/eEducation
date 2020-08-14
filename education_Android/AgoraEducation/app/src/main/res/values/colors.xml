@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F5F7F8</color>
+    <color name="colorPrimaryDark">#F5F7F8</color>
+    <color name="colorAccent">#44A2FC</color>
+
+    <color name="gray_F5F7F8">#F5F7F8</color>
+
+    <color name="red_FF0D19">#FF0D19</color>
+
+    <color name="yellow_FF8F00">#FF8F00</color>
+    <color name="yellow_FFCA00">#FFCA00</color>
+
+    <color name="green_00DD52">#00DD52</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <color name="black">#000000</color>
+    <color name="black_66">#66000000</color>
+    <color name="black_79">#79000000</color>
+    <color name="black_7F">#7F000000</color>
+
+    <color name="gray_333333">#333333</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_D8D8D8">#D8D8D8</color>
+    <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_EEEEEE">#EEEEEE</color>
+    <color name="gray_565656">#565656</color>
+    <color name="gray_191919">#191919</color>
+    <color name="gray_141414">#141414</color>
+    <color name="gray_DBE2E5">#DBE2E5</color>
+
+    <color name="blue_44A2FC">#44A2FC</color>
+    <color name="blue_E7F6FF">#E7F6FF</color>
+    <color name="blue_007AFF">#007AFF</color>
+    <color name="blue_007CFF">#007CFF</color>
+    <color name="blue_1F3DE8">#1F3DE8</color>
+
+    <color name="purple_C455DF">#C455DF</color>
+
+    <color name="eye_care_color">#1Aff9900</color>
+</resources>

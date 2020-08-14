@@ -1,0 +1,152 @@
+.media-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 58px;
+  margin-right: 10px;
+}
+
+.agora-video-view.show-placeholder {
+  .video-profile {
+    z-index: 9;
+    background-color: rgb(139, 144, 146);
+  }
+  .teacher-placeholder,
+  .student-placeholder {
+    z-index: 9;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  &::after {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 5vw;
+    content: ' ';
+    background-image: url('../assets/icon-clickable.png');
+  }
+}
+
+.video-profile {
+  z-index: 3;
+  width: 100%;
+  min-height: 24px;
+  // min-width: 280px;
+  // max-width: 280px;
+  position: absolute;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .account {
+    margin-left: 10px;
+    line-height: 14px;
+    font-size: 12px;
+    color: #fff;
+  }
+}
+
+.agora-video-view.show-placeholder {
+  .agora-rtc-video {
+    visibility: hidden;
+  }
+}
+
+.agora-video-view {
+  pointer-events: all;
+  background-color: #DBE2E5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  min-width: 280px;
+  max-width: 280px;
+  min-height: 159px;
+  max-height: 159px;
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+  canvas {
+    z-index: 1;
+  }
+
+  .rotateY180deg {
+    transform: rotateY(180deg);
+  }
+
+  .agora-rtc-video {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  .teacher-placeholder,
+  .student-placeholder {
+    display: flex;
+    top: 0;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 135px;
+    max-height: 135px;
+    position: absolute;
+    z-index: 2;
+  }
+  .student-placeholder::before,
+  .teacher-placeholder::before {
+    flex: 1;
+    background-color: #DBE2E5;
+    justify-content: center;
+    box-sizing: border-box;
+    background-size: 107px;
+  }
+  .icon-close {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    display: flex;
+    z-index: 10;
+    width: 18px;
+    height: 18px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.preview-video {
+  .agora-rtc-video {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    // WARN: ui for electron
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+  }
+}
+
+.media-board {
+  .screen-sharing {
+    display: flex;
+    flex: 1 1;
+    width: 1px;
+    position: relative;
+    z-index: 3;
+    .agora-rtc-video {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

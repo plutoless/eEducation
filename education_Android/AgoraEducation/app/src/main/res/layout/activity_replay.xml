@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classroom.ReplayActivity">
+
+    <FrameLayout
+        android:id="@+id/layout_whiteboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/layout_video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/layout_video"
+        android:layout_width="@dimen/dp_222"
+        android:layout_height="@dimen/dp_125"
+        android:background="@color/gray_DBE2E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_temp"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_teacher"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_chat_room"
+        android:layout_width="@dimen/dp_222"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_video">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_130"
+            android:layout_gravity="center"
+            android:src="@drawable/img_message" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_radius_5_black_7f"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

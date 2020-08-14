@@ -1,0 +1,25 @@
+.custom-radio {
+  .MuiRadio-colorPrimary.Mui-checked {
+    color: #44A2FC;
+  }
+  .Mui-checked ~ .MuiTypography-body1 {
+    color: #44A2FC;
+  }
+}
+
+.MuiFormControlLabel-root {
+  &.align-left {
+    float: left;
+    margin-left: -4px;
+    margin-right: 5px;
+    min-width: 80px;
+    text-align: center;
+  }
+  
+  &.align-right {
+    float: right;
+    margin: 0;
+    min-width: 80px;
+    text-align: center;
+  }
+}

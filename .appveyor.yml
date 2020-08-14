@@ -1,0 +1,26 @@
+platform:
+  - x64
+
+install:
+  - ps: Install-Product node 11 x64
+  - npm install
+
+build_script:
+  - cd education_electron 
+  - npm run write-config
+  - npm install && npm run package-win
+
+artifacts:
+  - path: './education_electron/release/*.exe'
+
+deploy:
+  tag: $(APPVEYOR_REPO_TAG_NAME)
+  release: Agora-eEducation-$(APPVEYOR_REPO_TAG_NAME)
+  provider: GitHub
+  auth_token:
+    secure: 7Cf7+F2TbDOW0PdEs4i02LYogxAr9fSvTXdA4G31YP5skKK3PO8NTeZufbVV9aHf
+  artifact: /.*\.exe/
+  draft: false
+  prerelease: false
+  on:
+    appveyor_repo_tag: true

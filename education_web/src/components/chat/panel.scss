@@ -1,0 +1,81 @@
+.chat-board {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  .menu {
+    max-height: 45px;
+    min-height: 45px;
+    flex: 1;
+    user-select: none;
+    .message-count {
+      background-color: red;
+      border-radius: 25px;
+      font-size: 9px;
+      line-height: 11px;
+      color: white;
+      position: absolute;
+      top: 11px;
+      padding: 1px 2.5px;
+      right: 15px;
+    }
+    .message-count.zh-CN {
+      right: 23px;
+      top: 9px;
+    }
+  }
+  .message-panel {
+    display: flex;
+    // margin-top: 10px;
+    margin: 10px;
+    position: relative;
+  }
+  .chat-messages-container {
+    flex: 1;
+    position: relative;
+  }
+  .chat-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .message-panel {
+      display: flex;
+      // margin-top: 10px;
+      margin: 10px;
+      position: relative;
+    }
+    .chat-messages-container {
+      flex: 1;
+      position: relative;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+  
+  .student-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.MuiButtonBase-root.chat-panel-btn {
+  right: 0px;
+  position: absolute;
+  line-height: 15px;
+  margin-left: 7px;
+  text-transform: none;
+  width: 64px;
+  height: 34px;
+  border-radius: 22px;
+  background: #44A2FC;
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+    background: #82C2FF;
+  }
+}

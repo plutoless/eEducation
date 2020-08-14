@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:layout_alignParentTop="true"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_above="@id/edit_send_msg"
+        android:background="@color/gray_DBE2E5" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edit_send_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_34"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@drawable/bg_chat_edit"
+        android:hint="@string/hint_im_message"
+        android:imeOptions="actionSend"
+        android:paddingStart="@dimen/dp_13"
+        android:paddingEnd="@dimen/dp_13" />
+
+    <FrameLayout
+        android:id="@+id/layout_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/img_message" />
+
+    </FrameLayout>
+
+</RelativeLayout>

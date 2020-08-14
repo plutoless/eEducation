@@ -1,0 +1,131 @@
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+  .classroom {
+    min-width: 1366px;
+    // min-height: 768px;
+
+    .whiteboard {
+      flex: 1;
+      // min-height: 720px;
+      min-width: 1086px;
+    }
+
+    .live-board {
+      // min-height: 720px;    
+    }
+
+    // TODO: comment for brand resolution
+    // .chat-board {
+    //   min-height: 559px;
+    // }
+  }
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .big-class.classroom {
+    .chat-board {
+      // min-height: 499px;
+    }
+  }
+  .classroom {
+    min-width: 990px;
+    // min-height: 706px;
+
+    .chat-board {
+      // min-height: 340px;
+    }
+
+    .whiteboard {
+      flex: 1;
+      // min-height: 658px;
+      // min-width: 710px;
+    }
+  }
+}
+
+.classroom {
+  .live-container {
+    position: relative;
+
+    .video-container {
+      // position: absolute;
+      margin-left: 10px;
+      // top: 10px;
+      // left: 67px;
+      display: flex;
+      z-index: 5;
+    }
+  }
+
+  .chat-board {
+    position: relative;
+    .chat-roomname {
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      border-bottom: 2px solid #DBE2E5;
+      box-sizing: border-box;
+      width:96px;
+      height:16px;
+      font-size:14px;
+      color:rgba(51,51,51,1);
+      line-height:16px;
+      max-width: 280px;
+      min-width: 280px;
+      max-height:47px;
+      min-height:47px;
+      background:rgba(255,255,255,1);
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 2px solid #eeeeee;
+      font-size: 14px;
+      line-height: 16px;
+      color: #666666;
+
+      .item {
+        position: relative;
+        padding: 14px 16px;
+        cursor: pointer;
+        min-width: 85px;
+        text-align: center;
+      }
+
+      .active {
+        color: #44A2FC;
+        border-bottom: 2px solid #44A2FC;
+      }
+    }
+
+    .message-panel {
+      .icon {
+        width: 34px;
+        height: 34px;
+        margin-right: 5px;
+      }
+
+      .message-input {
+        flex: 1;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+        padding-left: 10px;
+        max-height: 34px;
+        min-height: 34px;
+        background: #F2F4F5;
+        border-radius: 17px;
+        box-sizing: border-box;
+        .MuiInput-input {
+          padding-right: 66px;
+        }
+      }
+    }
+  }
+}
+
+.media-board {
+  overflow: hidden;
+  height: 100%;
+}

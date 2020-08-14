@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  AgoraEducation
+
+  Created by SRS on 2020/2/17.
+  Copyright © 2020 yangmoumou. All rights reserved.
+*/
+
+LoadingText = "loading...";
+ColorPickerText = " Color Picker";
+OKText = "OK";
+CancelText = "Cancel";
+EyeProtectionText = "Eye protection";
+SettingText = "Setting";
+ReplayRecordingText = "replay recording";
+
+ProhibitedPostText = " prohibited post";
+InputMessageText = " input message";
+QuitClassroomText = "quit classroom?";
+
+AcceptRequestText = "teacher accept your interactive request!";
+RejectRequestText = "teacher reject your interactive request!";
+TeaCloseCoVideoText = "teacher close your interactive!";
+
+MaterialsAreaText = "Materials area";
+ChatroomText = "Chatroom";
+StudentText = "Student";
+
+OneToOneText = "One to One Classroom";
+SmallClassText = "Small Classroom";
+LargeClassText = "Lecture Hall";
+
+UserNameVerifyText = "class name and user name must be within 20 characters";
+
+RoomTypeVerifyText = "please select a room type";
+RoomCountVerifyText = "Room is full, please change another room";
+RequestFailedText = "request failed";
+RequestConfigFailedText = "request config failed";
+EnterRoomFailedText = "enter room failed";
+LeftRoomFailedText = "left room failed";
+GetRoomInfoFailedText = "get room info failed";
+GetWhiteInfoFailedText = "get white info failed";
+UpdateRoomInfoFailedText = "update room info failed";
+UpdateCoVideoFailedText = "update coVideo info failed";
+RequestReplayFailedText = "request replay info failed";
+SendMessageFailedText = "send message failed";
+SendPeerMessageFailedText = "send peer message failed";
+InitSignalFailedText = "init signal failed";
+JoinSignalFailedText = "join signal failed";
+QuaryReplayFailedText = "Generated playback is not complete yet. Check back later!";
+
+MuteBoardText = "teacher has revoked your whiteboard permissions";
+UnMuteBoardText = "teacher has authorized your whiteboard permissions";
+
+LockBoardText = "teacher sets whiteboard to follow";
+UnlockBoardText = "teacher lifted the whiteboard to follow";
+LockBoardTouchText = "the teacher is moving the whiteboard. Please do not draw on it";
+
+UpdateText = "version has been updated. Please download the new version";
+
+JoinWhiteErrorText = "white board join error";
+JoinWhiteErrorText = "white board join error";
+LoginOnAnotherDeviceText = "account signed in on another device";
+
+GetLogParamsErrorText = "get log params failed";
+LogNotFoundText = "no log files found";
+LogClearErrorText = "failed to clear log files";
+LogZipErrorText = "log file compression failed";
+UploadOSSErrorText = "upload OSS failed";
+UploadLogText = "upload log";
+UploadLogSuccessText = "upload log successed";

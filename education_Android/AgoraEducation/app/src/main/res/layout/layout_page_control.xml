@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_start"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_4"
+            android:src="@drawable/ic_first" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_previous"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_4"
+            android:src="@drawable/ic_prev" />
+
+        <TextView
+            android:id="@+id/tv_page"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_32"
+            android:background="@drawable/btn_circle_f5f7f8"
+            android:gravity="center"
+            android:textColor="@color/gray_191919"
+            android:textSize="@dimen/sp_14" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_next"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_4"
+            android:src="@drawable/ic_next" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_end"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_4"
+            android:src="@drawable/ic_end" />
+
+    </LinearLayout>
+
+</merge>

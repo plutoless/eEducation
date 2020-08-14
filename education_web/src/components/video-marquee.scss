@@ -1,0 +1,35 @@
+.video-marquee-mask {
+  overflow: hidden;
+  position: relative;
+  margin-right: 10px;
+  .scroll-btn-group {
+    position: absolute;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    .icon {
+      &.icon-left::after {
+        left: 10px;
+        position: relative;
+      }
+      &.icon-right::after {
+        right: 10px;
+        position: relative;
+      }
+      &::after {
+        border-radius: 15px;
+        background-color: rgba($color: #000000, $alpha: 0.4);
+      }
+      &:hover::after {
+        background-color: rgba($color: #000000, $alpha: 0.6);
+      }
+      display: flex;
+      width: 24px;
+      height: 24px;
+      z-index: 3;
+    }
+  }
+}

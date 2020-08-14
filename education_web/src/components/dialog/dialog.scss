@@ -1,0 +1,75 @@
+// .custom-modal-mask {
+//   position: absolute;
+//   top: 0px;
+//   left: 0px;
+//   flex: 1;
+//   background: rgba($color: #000000, $alpha: 0.6);
+.MuiDialogContentText-root.dialog-title {
+  margin-bottom: 30px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(51,51,51,1);
+  line-height: 20px;
+}
+  .modal-container {
+    position: relative;
+    z-index: 500000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    // max-width: 240px;
+    // max-height: 134px;
+    min-width: 240px;
+    min-height: 134px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 4px 12px 0px rgba(0,0,0,0.2);
+    border-radius:8px;
+    .desc {
+      align-items: center;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333333;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 195px;
+      .confirm, .cancel {
+        box-shadow: none;
+      }
+    }
+    .confirm {
+      width:90px;
+      height:34px;
+      background:#44A2FC;
+      border-radius:17px;
+      font-size:14px;
+      font-weight:400;
+      color:#ffffff;
+      line-height:20px;
+      &:hover {
+        background: #82C2FF
+      }
+    }
+    .cancel {
+      width:90px;
+      height:34px;
+      background:#ffffff;
+      border-radius:17px;
+      font-size:14px;
+      font-weight:400;
+      color:#44A2FC;
+      line-height:20px;
+      border: 1px solid #44A2FC;
+      &:hover {
+        background: #ffffff;
+        color: #7CBFFF;
+        border: 1px solid #7CBFFF;
+      }
+    }
+  }
+// }

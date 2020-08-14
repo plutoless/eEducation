@@ -1,0 +1,92 @@
+parameters:
+  devDisplayName: ''
+  qaDisplayName: ''
+  workingDirectory: ''
+  scheme: ''
+
+jobs:
+  - job: ${{ parameters.devDisplayName }}Build
+    displayName: ${{ parameters.devDisplayName }}
+
+    pool:
+      vmImage: 'macos-latest'
+
+    variables:
+      - group: Edu
+
+    steps:
+      - script: cd ${{ parameters.workingDirectory }} && ls && python ci.env.py $(env)
+        env:
+          appId_demo: $(appId.demo)
+          appId_pre: $(appId.appId_pre)
+          appId_release: $(appId.release)
+          auth: $(auth.demo)
+          host_debug: $(host.debug)
+          host_pre: $(host.pre)
+          host_release: $(host.release)
+
+      - task: InstallAppleCertificate@2
+        inputs:
+          certSecureFile: 'certificate.p12'
+          certPwd: $(agora.passWord)
+
+      - task: InstallAppleProvisioningProfile@1
+        inputs:
+          provProfileSecureFile: 'AgoraAppsDevProfile.mobileprovision'
+
+      - script: cd ${{ parameters.workingDirectory }} && chmod +x build-dev.sh && ./build-dev.sh $(ukey) $(apikey)
+
+      - script: cd ${{ parameters.workingDirectory }} && mkdir app && mv AgoraEducationDev.ipa app && mv AgoraEducationDev.xcarchive app
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: ${{ parameters.workingDirectory }}/app
+          ArtifactName: ${{ parameters.devDisplayName }}
+
+#      - template: github-release.yml
+#        parameters:
+#          displayName: ${{ parameters.devDisplayName }}
+
+                
+  - job: ${{ parameters.qaDisplayName }}Build
+    displayName: ${{ parameters.qaDisplayName }}
+
+    pool:
+      vmImage: 'macos-latest'
+
+    variables:
+      - group: Edu
+
+    steps:
+      - script: cd ${{ parameters.workingDirectory }} && ls && python ci.env.py $(env)
+        env:
+          appId_demo: $(appId.demo)
+          appId_pre: $(appId.appId_pre)
+          appId_release: $(appId.release)
+          auth: $(auth.demo)
+          host_debug: $(host.debug)
+          host_pre: $(host.pre)
+          host_release: $(host.release)
+
+      - task: InstallAppleCertificate@2
+        inputs:
+          certSecureFile: 'TestCertificates2019.p12'
+          certPwd: $(agora.passWord)
+          
+      - task: InstallAppleProvisioningProfile@1
+        inputs:
+          provProfileSecureFile:
+              'AgoraIOTest2019.mobileprovision'
+      
+      - script: cd ${{ parameters.workingDirectory }} && chmod +x build-qa.sh && ./build-qa.sh $(ukey) $(apikey)
+
+      - script: cd ${{ parameters.workingDirectory }} && mkdir app && mv AgoraEducationQA.ipa app && mv AgoraEducationQA.xcarchive app
+
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: ${{ parameters.workingDirectory }}/app
+          ArtifactName: ${{ parameters.qaDisplayName }}
+
+#      - template: github-release.yml
+#        parameters:
+#          displayName: ${{ parameters.qaDisplayName }}

@@ -1,0 +1,18 @@
+
+/* Class = "UITextField"; placeholder = "Room Name"; ObjectID = "C8r-GQ-Fxh"; */
+"C8r-GQ-Fxh.placeholder" = "Room Name";
+
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "UEU-w3-aae"; */
+"UEU-w3-aae.normalTitle" = "Join";
+
+/* Class = "UITextField"; placeholder = "Your Name"; ObjectID = "bpE-MQ-ak5"; */
+"bpE-MQ-ak5.placeholder" = "Your Name";
+
+/* Class = "UILabel"; text = "Agora Education"; ObjectID = "poB-tT-Mak"; */
+"poB-tT-Mak.text" = "Agora Education";
+
+/* Class = "UILabel"; text = "Powered by agora.io"; ObjectID = "swM-eV-3Hz"; */
+"swM-eV-3Hz.text" = "Powered by agora.io";
+
+/* Class = "UIButton"; normalTitle = "Room Type"; ObjectID = "uVJ-fP-Ktw"; */
+"uVJ-fP-Ktw.normalTitle" = "Room Type";

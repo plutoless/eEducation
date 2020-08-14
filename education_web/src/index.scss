@@ -1,0 +1,373 @@
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.screen-sharing {
+  video {
+    object-fit: contain !important;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  width: 65px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.draggable {
+  z-index: 10000;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  .card-menu, .position-content {
+    -webkit-app-region: no-drag;
+  }
+}
+
+.nav-container {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+}
+
+.nav-container.draggable {
+  z-index: 200000;
+}
+
+button {
+  -webkit-app-region: no-drag;
+}
+
+.electron-btn-group, .menu-group {
+  -webkit-app-region: no-drag;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.MuiButtonBase-root.custom-button {
+  box-shadow: none;
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.flex-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-card {
+  position: relative;
+  background: white;
+  box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  display: flex;
+  max-width: 700px;
+  max-height: 500px;
+  min-width: 700px;
+  min-height: 500px;
+  box-sizing: content-box;
+  .card-menu {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    max-width: 291px;
+    min-height: 28px;
+  }
+}
+
+.short-title.en > span {
+  color: white !important;
+}
+
+.short-title {
+  display: flex;
+  flex-direction: column;
+  top: 38px;
+  left: 36px;
+  position: relative;
+  z-index: 2;
+  .title {
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+  }
+  .subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    color: #666;
+  }
+  .build-version {
+    font-size: 9px;
+    line-height: 16px;
+    color: #666;
+  }
+}
+
+.setting-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.cover {
+  max-width: 350px;
+  min-width: 350px;
+  background: #F5F7F8;
+  border-radius:8px 0px 0px 8px;
+  position: relative;
+
+  .build-version {
+    position: absolute;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .cover-placeholder-web {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .cover-en {
+    display: block;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 350px;
+    background-size: contain;
+    position: absolute;
+    background-image: url("./assets/cover-us.png");
+  }
+
+  .cover-cn {
+    display: block;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 350px;
+    background-size: contain;
+    position: absolute;
+    background-image: url("./assets/cover-cn.png");
+  }
+}
+
+.cover #local {
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.flex-item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.internal-card {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  align-items: center;
+  touch-action: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.flex-item.card {
+  position: relative;
+  max-width: 350px;
+  min-width: 350px;
+}
+
+.position-top {
+  position: relative;
+  top: 23px;
+  left: 29px;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+.position-content {
+  top: 45px;
+  bottom: 53px;
+  position: relative;
+  justify-content: space-between;
+  height: 350px;
+  margin: 0 55px;
+  max-width: 240px;
+  padding: 0 5px;
+  box-sizing: content-box;
+  display: flex;
+  align-items: center;
+  .MuiButtonBase-root.custom-button {
+    width: 250px;
+    height: 40px;
+    background: #44A2FC;
+    border-radius: 22px;
+    text-transform: none;
+    &:hover {
+      background: #82C2FF;
+    }
+    position: relative;
+    bottom: -14px;
+  }
+}
+
+.class-title {
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 10px;
+  width: 100%;
+  .room-name {
+    line-height: 20px;
+  }
+}
+
+.classroom {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: white;
+  box-shadow: 0px 6px 22px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  flex: 1;
+  height: 100%;
+  min-width: 990px;
+  // min-height: 706px;
+  .live-container {
+    flex: 1;
+    position: relative;
+  }
+}
+
+.live-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1366px) and (max-height: 768px) {
+  .classroom {
+    min-width: 990px;
+    // min-height: 706px;
+  }
+}
+
+@media screen and (min-width: 1366px) and (min-height: 768px) {
+  .classroom {
+    min-width: 1366px;
+    min-height: 768px;
+
+    // TODO: comment for brand resolution
+    // .live-board {
+    //   min-height: 720px;
+    // }
+
+    // .chat-board {
+    //   min-height: 402px;
+    // }
+  }
+}
+
+.home-cover-web {
+  background: #EEF1F3;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .web-menu {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    .web-menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 700px;
+      margin: 0 40px;
+      .short-title {
+        top: 0px;
+        left: 0px;
+        position: relative;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .home-cover-web {
+    min-width: 780px;
+  }
+}
+
+@media screen and (max-height: 768px) {
+  .home-cover-web {
+    min-height: 768px;
+  }
+}
+
+.flex-item.cover {
+  display: flex;
+  .preview-video {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    .student-placeholder,
+    .teacher-placeholder {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      display: flex;
+      flex: 1 1;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      &::before {
+        height: 100%;
+        width: 100%;
+        background-size: 155px;
+      }
+    }
+  }
+}

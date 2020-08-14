@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classroom.OneToOneClassActivity">
+
+    <io.agora.education.classroom.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/gray_F5F7F8"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <io.agora.education.classroom.widget.RtcVideoView
+        android:id="@+id/layout_video_teacher"
+        android:layout_width="@dimen/dp_165"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout_video_student"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+    <io.agora.education.classroom.widget.RtcVideoView
+        android:id="@+id/layout_video_student"
+        android:layout_width="@dimen/dp_165"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_video_teacher" />
+
+    <RelativeLayout
+        android:id="@+id/layout_im"
+        android:layout_width="@dimen/dp_222"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_view">
+
+        <View
+            android:id="@+id/line_vertical"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/gray_DBE2E5" />
+
+        <TextView
+            android:id="@+id/title_chat_room"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_toEndOf="@id/line_vertical"
+            android:gravity="center"
+            android:text="@string/title_chat_room"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_14" />
+
+        <View
+            android:id="@+id/line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_below="@id/title_chat_room"
+            android:layout_toEndOf="@id/line_vertical"
+            android:background="@color/gray_DBE2E5" />
+
+        <FrameLayout
+            android:id="@+id/layout_chat_room"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line_horizontal"
+            android:layout_toEndOf="@id/line_vertical" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_whiteboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layout_im"
+        app:layout_constraintStart_toEndOf="@id/layout_video_teacher"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+    <FrameLayout
+        android:id="@+id/layout_share_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layout_im"
+        app:layout_constraintStart_toEndOf="@id/layout_video_teacher"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_float"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:src="@drawable/ic_float"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

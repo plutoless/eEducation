@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.agora.education">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".EduApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:allowBackup"
+        tools:targetApi="n">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation" />
+        <activity
+            android:name=".classroom.OneToOneClassActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".classroom.SmallClassActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".classroom.LargeClassActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".classroom.ReplayActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:screenOrientation="sensorLandscape"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

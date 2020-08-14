@@ -1,0 +1,129 @@
+.menu-nav {
+  z-index: 10000;
+  justify-content: flex-end !important;
+  background-color: #F5F7F8 !important; 
+  position: relative;
+}
+
+.menu-nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  -webkit-app-region: no-drag;
+  .menu-group {
+    margin-left: 10px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 74px;
+  }
+}
+
+.nav-container {
+  padding: 0 10px;
+  height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  background-color: #F5F7F8;
+  .MuiButtonBase-root.nav-button {
+    box-shadow: none;
+  }
+  .MuiButtonBase-root.nav-button.start {
+    line-height: 15px;
+    margin-left: 8px;
+    text-transform: none;
+    width: 103px;
+    height: 28px;
+    border-radius: 14px;
+    background: #44A2FC;
+    box-sizing: border-box;
+    .MuiButton-label {
+      font-size: 14px;
+      line-height: 15px;
+    }
+    &:hover {
+      background: #82C2FF;
+    }
+  }
+  .MuiButtonBase-root.nav-button.stop {
+    line-height: 15px;
+    margin-left: 8px;
+    text-transform: none;
+    width: 103px;
+    height: 28px;
+    background: #FFFFFF;
+    color: #FF2D55;
+    border: 1px solid #FF2D55;
+    border-radius: 14px;
+    .MuiButton-label {
+      font-size: 14px;
+      line-height: 15px;
+    }
+    &:hover {
+      border: 1px solid #FF5E7D;
+      border-radius: 14px;
+      color: #FF5E7D;
+    }
+  }
+  
+  .network-state {
+    padding: 16px 0;
+  }
+  .menu {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    .btn-group {
+      display: flex;
+      min-width: 110px;
+      justify-content: space-between;
+    }
+    .electron-btn-group {
+      display: flex;
+      min-width: 70px;
+      justify-content: space-between;
+    }
+    .menu-group {
+      margin-left: 7px;
+      display: flex;
+      min-width: 74px;
+      justify-content: space-between;
+    }
+  }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  max-width: 78px;
+  min-width: 78px;
+  .time {
+    color: #333333;
+    font-size: 12px;
+    margin-left: 5px;
+    line-height: 14px;
+  }
+}
+
+.network-state {
+  display: flex;
+  .net-field {
+    color: #333;
+    font-size: 12px;
+    line-height: 17px;
+    margin-right: 10px;
+  }
+  .net-field-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .net-field-value {
+    color: #44A2FC;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

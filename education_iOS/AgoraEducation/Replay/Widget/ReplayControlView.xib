@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReplayControlView">
+            <connections>
+                <outlet property="playControlView" destination="iN0-l3-epB" id="gk3-7C-XPQ"/>
+                <outlet property="playOrPauseBtn" destination="aj1-Fh-59S" id="sXD-gP-qGr"/>
+                <outlet property="sliderView" destination="s2q-Zr-jNo" id="bcr-gA-bJR"/>
+                <outlet property="timeLabel" destination="CJI-Cg-fOQ" id="7Z4-zT-dsf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXE-dU-fif">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aj1-Fh-59S">
+                    <rect key="frame" x="5" y="5" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="24" id="jo9-JG-Xvk"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="play">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <state key="selected" backgroundImage="pause"/>
+                    <connections>
+                        <action selector="onPlayPauseButtonClick:" destination="-1" eventType="touchUpInside" id="6HP-Kq-jDd"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-Zr-jNo" customClass="SliderView">
+                    <rect key="frame" x="40" y="0.0" width="279" height="35"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00 / 00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="CJI-Cg-fOQ">
+                    <rect key="frame" x="330" y="0.0" width="80" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="HcT-o3-JWg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="s2q-Zr-jNo" secondAttribute="trailing" constant="95" id="BZZ-u5-RjR"/>
+                <constraint firstAttribute="bottom" secondItem="CJI-Cg-fOQ" secondAttribute="bottom" id="O8Q-i4-jek"/>
+                <constraint firstItem="vXE-dU-fif" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="T34-cV-FaO"/>
+                <constraint firstItem="s2q-Zr-jNo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VMY-Jr-ofk"/>
+                <constraint firstAttribute="trailing" secondItem="CJI-Cg-fOQ" secondAttribute="trailing" constant="4" id="XvV-3l-nLM"/>
+                <constraint firstItem="aj1-Fh-59S" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="iAA-KL-IH0"/>
+                <constraint firstAttribute="bottom" secondItem="s2q-Zr-jNo" secondAttribute="bottom" id="jY6-kB-GhW"/>
+                <constraint firstItem="vXE-dU-fif" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jhK-ls-ZGk"/>
+                <constraint firstAttribute="trailing" secondItem="vXE-dU-fif" secondAttribute="trailing" id="n68-Dy-iyX"/>
+                <constraint firstAttribute="bottom" secondItem="aj1-Fh-59S" secondAttribute="bottom" constant="6" id="owI-UF-4dH"/>
+                <constraint firstAttribute="bottom" secondItem="vXE-dU-fif" secondAttribute="bottom" id="qtA-1s-s7E"/>
+                <constraint firstItem="aj1-Fh-59S" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="vj6-8u-wXf"/>
+                <constraint firstItem="s2q-Zr-jNo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="wMe-f5-gxh"/>
+                <constraint firstItem="CJI-Cg-fOQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xss-d2-u43"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="91.40625"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="pause" width="12" height="12"/>
+        <image name="play" width="12" height="12"/>
+    </resources>
+</document>

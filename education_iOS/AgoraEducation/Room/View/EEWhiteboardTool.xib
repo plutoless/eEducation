@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EEWhiteboardTool">
+            <connections>
+                <outlet property="bgView" destination="K87-Oc-FIY" id="bT4-GY-Gin"/>
+                <outlet property="whiteboardTool" destination="iN0-l3-epB" id="5NG-W2-b96"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="46" height="214"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K87-Oc-FIY">
+                    <rect key="frame" x="0.0" y="0.0" width="46" height="214"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <button opaque="NO" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo1-90-hWy">
+                    <rect key="frame" x="4" y="4" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="8TL-Vi-vM7"/>
+                        <constraint firstAttribute="height" constant="38" id="h5R-1b-yQP"/>
+                    </constraints>
+                    <state key="normal" image="tool-select"/>
+                    <connections>
+                        <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="to7-VL-p3Y"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="201" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEb-0q-ZmZ">
+                    <rect key="frame" x="4" y="46" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="6de-Xp-lhZ"/>
+                        <constraint firstAttribute="height" constant="38" id="C3a-KQ-jcU"/>
+                    </constraints>
+                    <state key="normal" image="tool-pen"/>
+                    <connections>
+                        <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="uOP-Yl-66Z"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="202" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8o-vJ-gnw">
+                    <rect key="frame" x="4" y="88" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="DvD-aV-j7m"/>
+                        <constraint firstAttribute="height" constant="38" id="mwg-66-4kO"/>
+                    </constraints>
+                    <state key="normal" image="tool-text"/>
+                    <connections>
+                        <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="jbt-vH-MxW"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="203" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1z-50-2NF">
+                    <rect key="frame" x="4" y="130" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="R0K-uR-U04"/>
+                        <constraint firstAttribute="width" constant="38" id="wwJ-km-1IC"/>
+                    </constraints>
+                    <state key="normal" image="tool-eraser"/>
+                    <connections>
+                        <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="zBO-Sa-rF0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="204" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zT9-P1-z7v">
+                    <rect key="frame" x="4" y="172" width="38" height="38"/>
+                    <color key="backgroundColor" red="0.33725490196078434" green="0.33725490196078434" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="nzv-5a-ygW"/>
+                        <constraint firstAttribute="width" constant="38" id="qOS-Jd-mzd"/>
+                    </constraints>
+                    <state key="normal" image="tool-color"/>
+                    <connections>
+                        <action selector="clickEvent:" destination="-1" eventType="touchUpInside" id="s4e-ci-iaY"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="K87-Oc-FIY" secondAttribute="trailing" id="BUO-Jg-cSy"/>
+                <constraint firstItem="K87-Oc-FIY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Che-yR-IUB"/>
+                <constraint firstItem="xo1-90-hWy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="Jdp-Nc-7PK"/>
+                <constraint firstItem="xo1-90-hWy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="UVS-9T-PyE"/>
+                <constraint firstItem="zT9-P1-z7v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="WKa-O8-k0F"/>
+                <constraint firstItem="zT9-P1-z7v" firstAttribute="top" secondItem="f1z-50-2NF" secondAttribute="bottom" constant="4" id="ZSv-ob-YoG"/>
+                <constraint firstItem="xEb-0q-ZmZ" firstAttribute="top" secondItem="xo1-90-hWy" secondAttribute="bottom" constant="4" id="bPS-I6-ctr"/>
+                <constraint firstAttribute="bottom" secondItem="zT9-P1-z7v" secondAttribute="bottom" constant="4" id="dC2-uO-urt"/>
+                <constraint firstAttribute="bottom" secondItem="K87-Oc-FIY" secondAttribute="bottom" id="dDO-0F-KSM"/>
+                <constraint firstItem="w8o-vJ-gnw" firstAttribute="top" secondItem="xEb-0q-ZmZ" secondAttribute="bottom" constant="4" id="gn6-X8-QMF"/>
+                <constraint firstItem="w8o-vJ-gnw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="l9d-4O-8Ok"/>
+                <constraint firstItem="xEb-0q-ZmZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="lXi-qm-gdi"/>
+                <constraint firstItem="f1z-50-2NF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="4" id="rQO-uS-rr8"/>
+                <constraint firstItem="K87-Oc-FIY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="z5w-H9-tKk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-34.782608695652179" y="-88.392857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tool-color" width="38" height="38"/>
+        <image name="tool-eraser" width="38" height="38"/>
+        <image name="tool-pen" width="38" height="38"/>
+        <image name="tool-select" width="38" height="38"/>
+        <image name="tool-text" width="38" height="38"/>
+    </resources>
+</document>

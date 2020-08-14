@@ -1,0 +1,145 @@
+.screen-container::-webkit-scrollbar-thumb {
+  height: 6px;
+  background-clip: padding-box;
+  border-radius: 7px;
+  background-color: #666;
+}
+
+.screen-container::-webkit-scrollbar {
+  width: 8px;
+  height: 18px;
+}
+
+::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.window-picker-mask {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 17;
+  position: fixed;
+  align-items: center;
+  touch-action: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-tap-highlight-color: transparent;
+  .window-picker {
+    width: 640px;
+    height: 480px;
+    border-radius: 5px;
+    background-color: #333333; 
+    .header {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      .title {
+        color: #CCCCCC;
+        font-size: 11px;
+      }
+      .cancelBtn {
+        background-repeat: no-repeat;
+        width: 21px;
+        height: 21px;
+        position: absolute;
+        right: 13px;
+        background-size: 20px;
+        top: 14px;
+        background-image: url('../assets/cancel-share.png');
+      }
+    }
+    .footer {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .MuiButtonBase-root.share-confirm-btn {
+        line-height: 15px;
+        margin-left: 8px;
+        text-transform: none;
+        width: 103px;
+        height: 28px;
+        border-radius: 14px;
+        background: #44A2FC;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .MuiButton-label {
+          font-size: 14px;
+          line-height: 15px;
+        }
+        &:hover {
+          box-shadow: none;
+          background: #82C2FF;
+        }
+      }
+    }
+
+    .screen-container {
+      overflow: hidden;
+      overflow-y: scroll;
+      width: 98%;
+      height: calc(100% - 100px);
+      .screen-item {
+        width: 190px;
+        height: 131px;
+        border-radius: 5px;
+        border: 1px solid #666666;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        display: inline-flex;
+        .window-item {
+          display: flex;
+          flex: 1;
+          box-sizing: border-box;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          border: 1px solid #333333;
+        }
+        .active {
+          border: 1px solid #197CE1;
+        }
+        .screen-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          // padding: 10px 20px 5px 20px;
+          .content {
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .screen-meta {
+          width: 90%;
+          height: 12px;
+          line-height: 12px;
+          text-align: center;
+          font-size: 12px;
+          color: #CCCCCC;
+          overflow: hidden;
+          word-break: break-all;
+          position: absolute;
+          text-overflow: ellipsis;
+          bottom: 0;
+        }
+      }
+    }    
+  }
+}

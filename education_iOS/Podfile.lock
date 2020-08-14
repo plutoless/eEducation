@@ -1,0 +1,81 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AgoraRtcEngine_iOS (2.9.0.102)
+  - AgoraRtm_iOS (1.2.2)
+  - AliyunOSSiOS (2.10.8)
+  - CocoaLumberjack (3.6.1):
+    - CocoaLumberjack/Core (= 3.6.1)
+  - CocoaLumberjack/Core (3.6.1)
+  - dsBridge (3.0.6)
+  - Whiteboard (2.6.4):
+    - Whiteboard/Base (= 2.6.4)
+    - Whiteboard/Converter (= 2.6.4)
+    - Whiteboard/NativeReplayer (= 2.6.4)
+    - Whiteboard/Object (= 2.6.4)
+    - Whiteboard/Replayer (= 2.6.4)
+    - Whiteboard/Room (= 2.6.4)
+    - Whiteboard/Utils (= 2.6.4)
+  - Whiteboard/Base (2.6.4):
+    - dsBridge (~> 3.0.2)
+    - Whiteboard/Object
+  - Whiteboard/Converter (2.6.4):
+    - Whiteboard/Object
+  - Whiteboard/NativeReplayer (2.6.4):
+    - Whiteboard/Replayer
+  - Whiteboard/Object (2.6.4):
+    - YYModel (~> 1.0.4)
+  - Whiteboard/Replayer (2.6.4):
+    - Whiteboard/Base
+  - Whiteboard/Room (2.6.4):
+    - Whiteboard/Base
+  - Whiteboard/Utils (2.6.4):
+    - Whiteboard/Base
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.2.1)
+  - AgoraRtcEngine_iOS (= 2.9.0.102)
+  - AgoraRtm_iOS (~> 1.2.2)
+  - AliyunOSSiOS
+  - CocoaLumberjack
+  - Whiteboard (= 2.6.4)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AliyunOSSiOS
+    - CocoaLumberjack
+  trunk:
+    - AFNetworking
+    - AgoraRtcEngine_iOS
+    - AgoraRtm_iOS
+    - dsBridge
+    - Whiteboard
+    - YYModel
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AgoraRtcEngine_iOS: 9755a9dcd45ab1d177ece9fe15dea23124d63d50
+  AgoraRtm_iOS: c6ba986a3af73dd0f02e6e2995ae4fe9c155e6ae
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
+  dsBridge: 48b62ee8a411ad601a88d6f6c8cf6cb634b206b7
+  Whiteboard: 79ab8b3ba0a3bcd573c9a77a23da5ef07e7a0f5d
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 99dbf481dd314187cf8c6e9e29d2b86f7bb55c86
+
+COCOAPODS: 1.8.4

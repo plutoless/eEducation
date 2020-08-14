@@ -1,0 +1,199 @@
+.replay-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.replay {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  height: 100%;
+
+  #whiteboard {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .custom-video-progress {
+    color: #44A2FC;
+    .MuiSlider-rail,
+    .MuiSlider-track {
+      height: 4px;
+    }
+  }
+
+  .play-cover {
+    background-color:rgba(0,0,0,0.4);
+    background-image: url('../assets/icon-play@2x.png');
+    background-size: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.4);
+  }
+
+  .player-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+
+    .player-cover {
+      opacity: 1;
+      transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      touch-action: none;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-tap-highlight-color: transparent;
+      z-index: 99;
+      .play-btn {
+        background-image: url('../assets/icon-play-big@2x.png');
+        background-size: 64px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 64px;
+        height: 64px;
+        cursor: pointer;
+        position: relative;
+        z-index: 999;
+      }
+    }
+
+    .player {
+      position: relative;
+      display: flex;
+      flex: 1 1;
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin: 17px;
+
+      .agora-logo {
+        position: absolute;
+        width: 120px;
+        height: 32px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        top: 0;
+        left: 0;
+        background-image: url("../assets/logo-agora@2x.png");
+      }
+      .video-menu {
+        position: relative;
+        z-index: 999;
+        background: rgba(0,0,0,0.5);
+        // opacity: 0.5;
+        height: 65px;
+        border-radius: 10px;
+        display: flex;
+        flex: 1;
+        .control-btn {
+          display: flex;
+          flex: 1;
+          max-width: 58px;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          z-index: 999;
+          .btn {
+            cursor: pointer;
+            height: 24px;
+            width: 24px;
+          }
+          .play {
+            border-radius: 18px;
+            border: 1px solid #fff;
+            background-size: 24px;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            background-image: url('../assets/icon-play@2x.png');
+          }
+          .paused {
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-image: url('../assets/icon-pause@2x.png');
+          }
+        }
+
+        .progress {
+          display: flex;
+          flex: 1 1;
+          justify-content: center;
+          align-items: center;
+          .time {
+            display: flex;
+            font-size: 12px;
+            font-family: HelveticaNeue;
+            color: #eeeeee;
+            line-height: 14px;
+            padding: 0 20px;
+          }
+        }
+      }
+
+      .icon-paused {
+        background-image: url('../assets/icon-pause@2x.png');
+      }
+    }
+  }
+
+  .video-container {
+    .video-player {
+      height: 280px;
+      width: 280px;
+      background-color: #DBE2E5;
+      background-image: url("../assets/pic-teacher.png");
+      background-position: center;
+      background-size: 155.34px;
+      background-repeat: no-repeat;
+    }
+
+    overflow: hidden;
+    border-left: 2px solid #DBE2E5;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    max-width: 280px;
+    min-width: 280px;
+
+    .icon-play {
+      width: 64px;
+      height: 64px;
+      background-repeat: no-repeat;
+      background-image: url("../assets/icon-play@2x.png");
+    }
+
+    .chat-holder {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &::after {
+        width: 100%;
+        background-size: 130px;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        content: ' ';
+        background-image: url("../assets/pic-message@2x.png");
+        display: block;
+        position: absolute;
+        top: 25%;
+      }
+    }
+  }
+}

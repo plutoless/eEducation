@@ -1,0 +1,2 @@
+include ':app', ':whiteboard', ':base', ':log', ':sdk', ':timeline'
+rootProject.name = 'AgoraEducation'

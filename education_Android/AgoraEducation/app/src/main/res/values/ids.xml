@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tool_selector" type="id" />
+    <item name="tool_pencil" type="id" />
+    <item name="tool_text" type="id" />
+    <item name="tool_eraser" type="id" />
+    <item name="tool_color" type="id" />
+</resources>

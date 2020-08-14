@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".classroom.SmallClassActivity">
+
+    <io.agora.education.classroom.widget.TitleView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:background="@color/gray_F5F7F8"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_videos"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_70"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/title_view" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_im"
+        android:layout_width="@dimen/dp_222"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcv_videos">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/layout_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/blue_44A2FC"
+            app:tabIndicatorHeight="@dimen/dp_2"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/blue_44A2FC"
+            app:tabTextColor="@color/gray_333333">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_chat_room" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_student_list" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <View
+            android:id="@+id/line_vertical"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:background="@color/gray_DBE2E5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <View
+            android:id="@+id/line_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="@color/gray_DBE2E5"
+            app:layout_constraintBottom_toBottomOf="@id/layout_tab" />
+
+        <FrameLayout
+            android:id="@+id/layout_chat_room"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/line_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line_horizontal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_whiteboard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layout_im"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcv_videos" />
+
+    <FrameLayout
+        android:id="@+id/layout_share_video"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/layout_im"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcv_videos" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_float"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_5"
+        android:src="@drawable/ic_float"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcv_videos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

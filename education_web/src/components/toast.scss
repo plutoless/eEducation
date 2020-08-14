@@ -1,0 +1,56 @@
+.visibility {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.notice-message-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  top: 4rem;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10000;
+  user-select: none;
+  pointer-events: none;
+}
+
+.custom-toast {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: .7rem;
+  .hidden {
+    visibility: hidden;
+  }
+  .toast-container {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    min-height: 34px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    padding: 0 14px;
+    .text {
+      font-size: 12px;
+      color: #fff;
+      line-height: 17px;
+    }
+  }
+  .toast-text {
+    font-size: 12px;
+    width: 210px;
+    height: 34px;
+    background: #000000;
+    opacity: 0.25;
+  }
+}

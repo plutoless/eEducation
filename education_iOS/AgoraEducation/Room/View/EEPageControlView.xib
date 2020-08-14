@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EEPageControlView">
+            <connections>
+                <outlet property="pageControlView" destination="D5m-FE-BBW" id="kzt-Uh-6pp"/>
+                <outlet property="pageCountLabel" destination="k35-e2-3UG" id="O8L-nH-o6y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view autoresizesSubviews="NO" contentMode="scaleToFill" id="D5m-FE-BBW">
+            <rect key="frame" x="0.0" y="0.0" width="244" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="firstPage" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BDG-ya-1tD">
+                    <rect key="frame" x="5" y="4" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="qR1-Ll-2CR"/>
+                        <constraint firstAttribute="height" constant="38" id="uwB-Ug-EYy"/>
+                    </constraints>
+                    <state key="normal" image="page-first"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="E1y-jU-qZu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="previousPage" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2MU-Ef-DsD">
+                    <rect key="frame" x="47" y="4" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="Bjq-hI-zqw"/>
+                        <constraint firstAttribute="width" constant="38" id="Tgv-C9-Zsa"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="page-prev"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="xoc-fU-un6"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="lastPage" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7K6-sc-5fR">
+                    <rect key="frame" x="201" y="4" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="Jxf-Bu-LaA"/>
+                        <constraint firstAttribute="height" constant="38" id="kVT-wg-gQ1"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="page-end"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="bf8-fH-nko"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="nextPage" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-7G-Em0">
+                    <rect key="frame" x="159" y="4" width="38" height="38"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="38" id="iDf-w3-r33"/>
+                        <constraint firstAttribute="height" constant="38" id="zYu-Fz-wzo"/>
+                    </constraints>
+                    <state key="normal" image="page-next"/>
+                    <connections>
+                        <action selector="buttonClick:" destination="-1" eventType="touchUpInside" id="kHn-Ie-ndd"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k35-e2-3UG">
+                    <rect key="frame" x="89" y="6.6666666666666679" width="66" height="33"/>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.95686274509803915" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="66" id="JbM-bo-740"/>
+                        <constraint firstAttribute="height" constant="33" id="sBd-Us-ilb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="18"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="2MU-Ef-DsD" firstAttribute="leading" secondItem="BDG-ya-1tD" secondAttribute="trailing" constant="4" id="7wH-QR-pGi"/>
+                <constraint firstItem="BDG-ya-1tD" firstAttribute="centerY" secondItem="D5m-FE-BBW" secondAttribute="centerY" id="Fvw-kz-Npl"/>
+                <constraint firstItem="Kc4-7G-Em0" firstAttribute="centerY" secondItem="D5m-FE-BBW" secondAttribute="centerY" id="R0F-ze-rfR"/>
+                <constraint firstAttribute="trailing" secondItem="7K6-sc-5fR" secondAttribute="trailing" constant="5" id="Xlg-6d-1NR"/>
+                <constraint firstItem="7K6-sc-5fR" firstAttribute="leading" secondItem="Kc4-7G-Em0" secondAttribute="trailing" constant="4" id="YMO-GY-6yx"/>
+                <constraint firstItem="k35-e2-3UG" firstAttribute="centerX" secondItem="D5m-FE-BBW" secondAttribute="centerX" id="mYv-eM-zOV"/>
+                <constraint firstItem="7K6-sc-5fR" firstAttribute="centerY" secondItem="D5m-FE-BBW" secondAttribute="centerY" id="oW9-2F-zET"/>
+                <constraint firstItem="k35-e2-3UG" firstAttribute="centerY" secondItem="D5m-FE-BBW" secondAttribute="centerY" id="ss2-Mi-hYu"/>
+                <constraint firstItem="BDG-ya-1tD" firstAttribute="leading" secondItem="D5m-FE-BBW" secondAttribute="leading" constant="5" id="uiq-QS-ZrK"/>
+                <constraint firstItem="2MU-Ef-DsD" firstAttribute="centerY" secondItem="D5m-FE-BBW" secondAttribute="centerY" id="zct-qR-Ksg"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24" y="80.541871921182263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="page-end" width="38" height="38"/>
+        <image name="page-first" width="38" height="38"/>
+        <image name="page-next" width="38" height="38"/>
+        <image name="page-prev" width="38" height="38"/>
+    </resources>
+</document>

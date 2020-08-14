@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.herewhite.sdk.WhiteboardView
+        android:id="@+id/white_board_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <io.agora.education.classroom.widget.whiteboard.ApplianceView
+        android:id="@+id/appliance_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@drawable/bg_appliance_view"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <io.agora.education.classroom.widget.whiteboard.ColorPicker
+        android:id="@+id/color_select_view"
+        android:layout_width="@dimen/dp_230"
+        android:layout_height="@dimen/dp_129"
+        android:layout_marginStart="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:elevation="@dimen/dp_6"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/dp_6"
+        app:layout_constraintBottom_toBottomOf="@id/appliance_view"
+        app:layout_constraintStart_toEndOf="@id/appliance_view"
+        tools:targetApi="lollipop" />
+
+    <io.agora.education.classroom.widget.whiteboard.PageControlView
+        android:id="@+id/page_control_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:elevation="@dimen/dp_3"
+        android:paddingStart="@dimen/dp_4"
+        android:paddingEnd="@dimen/dp_4"
+        app:cardCornerRadius="@dimen/dp_6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="lollipop" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,46 @@
+
+
+
+.student-list {
+  position: absolute;
+  top: 55px;
+  overflow-y: auto;
+  min-width: 280px;
+  max-width: 280px;
+  height: calc(90% - .5rem);
+
+  .item {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nickname {
+    margin-left: 10px;
+    height:17px;
+    font-size:12px;
+    font-weight:400;
+    color:rgba(3,3,3,1);
+    line-height:17px;
+    max-width: 113px;
+    min-width: 113px;
+  }
+  .attrs-group {
+    display: flex;
+    min-width: 148px;
+    max-width: 148px;
+    justify-content: space-evenly;
+    .items {
+      margin: 4px;
+      display: flex;
+      min-width: 32px;
+      max-width: 32px;
+      height: 32px;
+      .icon {
+        display: flex;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

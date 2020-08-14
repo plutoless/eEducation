@@ -1,0 +1,69 @@
+/* 
+  Localizable.strings
+  AgoraEducation
+
+  Created by SRS on 2020/2/17.
+  Copyright © 2020 yangmoumou. All rights reserved.
+*/
+
+LoadingText = "加载中...";
+ColorPickerText = " 选择颜色";
+OKText = "确定";
+CancelText = "取消";
+EyeProtectionText = "护眼模式";
+SettingText = "设置";
+ReplayRecordingText = "回放";
+
+ProhibitedPostText = " 禁言中";
+InputMessageText = " 说点什么";
+
+QuitClassroomText = "退出教室？";
+AcceptRequestText = "老师接受了你的连麦申请!";
+RejectRequestText = "老师拒绝了你的连麦申请!";
+TeaCloseCoVideoText = "老师关闭了你的连麦!";
+
+MaterialsAreaText = "教材区";
+ChatroomText = "聊天室";
+StudentText = "学生";
+
+OneToOneText = "一对一";
+SmallClassText = "小班课";
+LargeClassText = "大班课";
+
+UserNameVerifyText = "教室名、用户名最多为20个字符";
+RoomTypeVerifyText = "请选择房间类型";
+RoomCountVerifyText = "人数已满,请换个房间";
+RequestFailedText = "请求失败";
+RequestConfigFailedText = "请求配置失败";
+EnterRoomFailedText = "加入房间失败";
+LeftRoomFailedText = "离开房间失败";
+GetRoomInfoFailedText = "获取房间信息失败";
+GetWhiteInfoFailedText = "获取白板信息失败";
+UpdateRoomInfoFailedText = "更新房间信息失败";
+UpdateCoVideoFailedText = "更新连麦信息失败";
+RequestReplayFailedText = "获取回放信息失败";
+SendMessageFailedText = "消息发送失败";
+SendPeerMessageFailedText = "点对点消息发送失败";
+InitSignalFailedText = "初始化信令失败";
+JoinSignalFailedText = "加入信令失败";
+QuaryReplayFailedText = "生成回放还没有完成，过会儿再来看下";
+
+MuteBoardText = "老师已回收了你的白板权限";
+UnMuteBoardText = "老师已授权了你的白板权限";
+
+LockBoardText = "老师设置了白板跟随";
+UnlockBoardText = "老师解除了白板跟随";
+LockBoardTouchText = "老师正在控制白板，请勿书写";
+
+UpdateText = "版本已经更新了，请下载最新版本";
+
+JoinWhiteErrorText = "白板加入失败";
+LoginOnAnotherDeviceText = "账户在其他设备上登录了";
+
+GetLogParamsErrorText = "获取日志参数失败";
+LogNotFoundText = "没有找到日志文件";
+LogClearErrorText = "清除日志文件失败";
+LogZipErrorText = "日志文件压缩失败";
+UploadOSSErrorText = "上传OSS失败";
+UploadLogText = "日志上报";
+UploadLogSuccessText = "日志上报成功";

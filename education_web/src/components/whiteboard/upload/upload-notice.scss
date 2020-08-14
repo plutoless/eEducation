@@ -1,0 +1,36 @@
+.upload-notice {
+  position: absolute;
+  top: 188px;
+  left: 50%;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  user-select: none;
+
+  .notice-container {
+    padding: 9px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px 0px rgba(29, 111, 43, 0.17);
+    border-radius: 6px;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    &.ok {
+      background: #f1fff3;
+      border: 1px solid #41c557;
+      color: #41c557;
+    }
+    &.error {
+      background: #FFF6F6;
+      border: 1px solid #FF3B30;
+      color: #FF3B30;
+    }
+    .title {
+      font-size: 12px;
+      line-height: 17px;
+      padding-left: 9px;
+    }
+  }
+}

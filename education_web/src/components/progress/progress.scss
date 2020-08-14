@@ -1,0 +1,44 @@
+.progress-cover {
+  opacity: 1;
+  transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  touch-action: none;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-tap-highlight-color: transparent;
+  z-index: 15;
+  .progress {
+    width: 124px;
+    height: 124px;
+    background: rgba(255,255,255,1);
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    z-index: 20;
+    .content {
+      text-align: center;
+    }
+    .circular {
+      color: #44A2FC;
+      width: 40px;
+      height: 40px;
+    }
+    .title {
+      display: block;
+      font-size: 14px;
+      font-family: HelveticaNeue;
+      color: #333333;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+  }
+}

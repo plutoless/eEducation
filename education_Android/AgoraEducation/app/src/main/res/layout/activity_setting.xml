@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_F5F7F8"
+    tools:context=".SettingActivity">
+
+    <FrameLayout
+        android:id="@+id/layout_eye_care"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_back">
+
+        <Switch
+            android:id="@+id/switch_eye_care"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/eye_care_mode"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_17" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_policy"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_54"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_eye_care">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_next" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:text="@string/policy"
+            android:textColor="@color/gray_333333"
+            android:textSize="@dimen/sp_17" />
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="@dimen/dp_36"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
+        android:src="@drawable/ic_prev"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        android:textColor="@color/gray_191919"
+        android:textSize="@dimen/sp_17"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
